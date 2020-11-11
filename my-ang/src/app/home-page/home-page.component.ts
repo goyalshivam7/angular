@@ -6,15 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  testing = false;
-  sample = "hello";
+  testing: boolean = false;
+  sample:string = "hello";
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
   onSubmit(){
   this.testing = true;
+  // this.sample;
   }
 
 }
