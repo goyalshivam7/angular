@@ -6,11 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent implements OnInit {
+  Students: any[] = [
+    {
+      'name': 'shivam'
+    },
+    {
+      'name': 'shivam Goyal'
+    },
+    {
+      'name': 'goyal'
+    },
+  ];
+  constructor() {
 
-  Students:any[] [
-  ]
-
-  constructor() { 
   }
 
   ngOnInit(): void {
