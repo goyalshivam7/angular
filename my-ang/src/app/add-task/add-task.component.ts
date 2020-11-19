@@ -29,9 +29,10 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createNewData(){
+  async createNewData(){
     console.log(this.email);
     console.log(this.password);
+    console.log("hello");
   }
 
 }
