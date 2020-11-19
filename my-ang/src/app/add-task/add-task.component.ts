@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-task',
@@ -17,11 +18,20 @@ export class AddTaskComponent implements OnInit {
       'name': 'goyal'
     },
   ];
+
+  @ViewChild('form') form: NgForm;
+    email: string
+    password: string
   constructor() {
 
   }
 
   ngOnInit(): void {
+  }
+
+  createNewData(){
+    console.log(this.email);
+    console.log(this.password);
   }
 
 }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "project-cf3a4": {
+      "hosting": {
+        "my-ang": [
+          "project-cf3a4"
+        ]
+      }
+    }
+  }
+}
