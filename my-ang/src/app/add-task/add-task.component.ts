@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { AngularFireFunctions } from '@angular/fire/functions';
 import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-add-task',
@@ -22,7 +24,8 @@ export class AddTaskComponent implements OnInit {
   @ViewChild('form') form: NgForm;
     email: string
     password: string
-  constructor() {
+
+  constructor(public functions: AngularFireFunctions) {
 
   }
 
@@ -32,7 +35,17 @@ export class AddTaskComponent implements OnInit {
   async createNewData(){
     console.log(this.email);
     console.log(this.password);
-    console.log("hello");
+
+    const saveTask = this.functions.httpsCallable('storeData');
+
+    try{
+      const result = await saveTask({ Email: this.email, Password: this.password}).toPromise();
+
+      console.log("Successfully created the task");
+      console.log(result);
+    } catch (error) {
+      console.error("Error", error);
+      }
+    }
   }
 
-}
