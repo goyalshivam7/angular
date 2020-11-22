@@ -26,7 +26,6 @@ export class AddTaskComponent implements OnInit {
     password: string
 
   constructor(public functions: AngularFireFunctions) {
-
   }
 
   ngOnInit(): void {
